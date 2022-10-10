@@ -1,3 +1,5 @@
+Unicode to GSM character converter
+
 # Step 1
 npm i unicodetogsm
 
