@@ -1,0 +1,25 @@
+{
+  "name": "unicodetogsm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config=webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ealexseen/unicodeToGSM.git"
+  },
+  "author": "ealexseen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ealexseen/unicodeToGSM/issues"
+  },
+  "homepage": "https://github.com/ealexseen/unicodeToGSM#readme",
+  "dependencies": {
+    "webpack": "^5.74.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.10.0"
+  }
+}
