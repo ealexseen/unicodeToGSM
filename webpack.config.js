@@ -1,29 +1,27 @@
 const path = require('path');
-const isProd = process.env.NODE_ENV === 'production';
 
 const configPublic = {
-    mode: isProd ? 'production' : 'development',
+    mode: 'production', // development|production
     entry: {
-        'index': './src/index.js',
+        'index': './src/UnicodeToGSM.js',
     },
     output: {
-        filename: '[name].js',
         path: path.resolve(__dirname, 'build'),
-    },
-    resolve: {
-        alias: {
-            vue: 'vue/dist/vue.esm.js',
+        filename: '[name].js',
+        library: {
+            type: "module",
         },
     },
-    module: {
-        rules: [
-
-        ]
+    experiments: {
+        asyncWebAssembly: true,
+        // WebAssembly as async module (Proposal)
+        syncWebAssembly: true,
+        // WebAssembly as sync module (deprecated)
+        outputModule: true,
+        // Allow to output ESM
+        topLevelAwait: true,
+        // Allow to use await on module evaluation (Proposal)
     },
-    plugins: [
-
-    ],
-    watch: false,
 };
 
 module.exports = [
